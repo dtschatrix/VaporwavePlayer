@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:VaporwavePlayer">
+
+    <Color x:Key="BackgroundLight">#c3c7cb</Color>
+    <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}"></SolidColorBrush>
+    
+    <Color x:Key="ActivePanel">#0000aa</Color>
+    <SolidColorBrush x:Key="ActivePanelBrush" Color="{StaticResource ActivePanel}"></SolidColorBrush>
+
+    <Color x:Key="NonActivePanel">#808080</Color>
+    <SolidColorBrush x:Key="NonActivePanelBrush" Color="{StaticResource NonActivePanel}"></SolidColorBrush>
+
+    <Color x:Key="ForegroundMain">#686868</Color>
+    <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}" />
+
+    <Color x:Key="ForegroundVeryDark">#000000</Color>
+    <SolidColorBrush x:Key="ForegroundVeryDarkBrush" Color="{StaticResource ForegroundVeryDark}" />
+
+    <Color x:Key="ForegroundLight">#ffffff</Color>
+    <SolidColorBrush x:Key="ForegroundLightBrush" Color="{StaticResource ForegroundLight}" />
+
+
+</ResourceDictionary>

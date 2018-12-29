@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VaporwavePlayer
 {
-    public class Song
+    public class Song : BaseViewModel
     {
         private string _artist;
         private string _song_name;
