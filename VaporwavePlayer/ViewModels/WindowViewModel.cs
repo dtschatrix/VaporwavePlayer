@@ -54,7 +54,7 @@ namespace VaporwavePlayer
         /// <summary>
         /// The size of the resize border around the window
         /// </summary>
-        public int ResizeBorder { get { return Borderless ? 0 : 6; } }
+        public int ResizeBorder { get { return Borderless ? 1 : 6; } }
 
         /// <summary>
         /// The size of the resize border around the window, taking into account the outer margin

@@ -22,6 +22,7 @@ namespace VaporwavePlayer
     {
         public MainWindow()
         {
+           
             InitializeComponent();
         }
     }
