@@ -1,15 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:VaporwavePlayer">
+                    xmlns:local="clr-namespace:VaporwavePlayer"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
 
 
-    <FontFamily x:Key ="VCR_OSD">pack://applicaton;,,,/resources/Fonts/#VCR OSD Mono</FontFamily>
+    <FontFamily x:Key ="ThunderStrike3D">pack://applicaton;,,,/resources/Fonts/#Thunderstrike 3D</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrike3D}"></Setter>
+    </Style>
+    <FontFamily x:Key ="ThunderStrikeGradient">pack://applicaton;,,,/resources/Fonts/#Thunderstrike Gradient</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyleTest">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrikeGradient}"></Setter>
+    </Style>
+    <!--<FontFamily x:Key ="VCR_OSD">pack://applicaton;,,,/resources/Fonts/#VCR OSD Mono</FontFamily>
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource VCR_OSD}"></Setter>
-    </Style>
+    </Style> -->
 
     <Style TargetType="{x:Type TextBlock}" x:Key="BaseStyleText">
-        <Setter Property="FontFamily" Value="{StaticResource VCR_OSD}"></Setter>
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrike3D}"></Setter>
     </Style>
         
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" />
@@ -17,6 +26,11 @@
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" />
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseStyleText}" />
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}" />
-   
+
+
+    <system:Double x:Key ="FontSizeRegular">20</system:Double>
+    <system:Double x:Key ="FontSizeSmall">14</system:Double>
+    <system:Double x:Key ="FontSizeLarge">30</system:Double>
+
 
 </ResourceDictionary>

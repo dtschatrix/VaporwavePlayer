@@ -9,12 +9,24 @@ namespace VaporwavePlayer
 {
     public class Song : BaseViewModel
     {
+        #region private memebers
         private string _artist;
-        private string _song_name;
+        private string _songname;
         private string _genre;
 
+
+        #endregion
+
+        #region Properties
         public int Id { get; set; }
         public int Duration { get; private set; }
+
+
+        #endregion
+        
+        #region ctor
+
+
 
 
         public Song(int duration, int id)
@@ -22,7 +34,7 @@ namespace VaporwavePlayer
             this.Id = id;
             this.Duration = duration;
             _artist = "Unknown";
-            _song_name = "Unknown";
+            _songname = "Unknown";
         }
 
         public Song(string artist, int duration, int id)
@@ -40,8 +52,8 @@ namespace VaporwavePlayer
         public Song(string artist, int duration, string genre, int id, string song_name)
         :this (artist,duration,genre,id)
         {
-            this._song_name = song_name;
+            this._songname = song_name;
         }
-
+        #endregion
     }
 }
