@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VaporwavePlayer.Pages
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for PlayerLoginPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class PlayerLoginPage : Page
     {
-        public LoginPage()
+        public PlayerLoginPage()
         {
             InitializeComponent();
         }

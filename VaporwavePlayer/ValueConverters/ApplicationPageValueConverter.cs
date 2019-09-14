@@ -16,7 +16,7 @@ namespace VaporwavePlayer
             switch ((ApplicationPage)value)
             {
                 case ApplicationPage.Login:
-                    return new LoginPage();
+                    return new PlayerLoginPage();
 
                 default:
                     Debugger.Break();

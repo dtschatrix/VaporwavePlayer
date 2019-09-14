@@ -84,10 +84,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataModels\ApplicationPage.cs" />
-    <Compile Include="Song\Song.cs" />
-    <Compile Include="Pages\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
+    <Compile Include="Pages\PlayerLoginPage.xaml.cs">
+      <DependentUpon>PlayerLoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Song\Song.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
@@ -106,7 +106,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\LoginPage.xaml">
+    <Page Include="Pages\PlayerLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +165,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
+    <Resource Include="resources\Fonts\FasterOne-Regular.ttf" />
+    <Resource Include="resources\Fonts\ChicagoFLF.ttf" />
+    <Resource Include="resources\Fonts\thunderstrikeitalic.ttf" />
     <Resource Include="resources\Fonts\thunderstrike3d.ttf" />
     <Resource Include="resources\Fonts\thunderstrikecond.ttf" />
     <Resource Include="resources\Fonts\thunderstrikeexpand.ttf" />

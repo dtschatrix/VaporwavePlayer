@@ -8,24 +8,53 @@
         <GradientStop Color="#FB8CAB" Offset="1"></GradientStop>
     </LinearGradientBrush>
 
-    <Style x:Key="TitleText" TargetType="TextBox">
-        <Setter Property="Background" Value="{StaticResource GradientBrushForTitle}" />
-        <Setter Property="Foreground" Value="#E0E0E0" />
-        <Setter Property="Padding" Value="5" />
-    </Style>
+    
      
     <Style x:Key="Title" TargetType="Grid">
         <Setter Property="Background" Value ="{StaticResource GradientBrushForTitle}"></Setter>
 
     </Style>
 
+    
 
-    <Style TargetType="TextBlock" x:Key="Text" BasedOn="{StaticResource BaseStyleText}">
+
+    <Style TargetType="TextBlock" x:Key="Text">
+        <Setter Property="FontFamily" Value="{StaticResource ChicagoFLF}"></Setter>
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Margin" Value="0 6" />
-        <Setter Property="FontSize" Value ="{StaticResource FontSizeLarge}"/>
+        <Setter Property="FontSize" Value ="{StaticResource FontSizeVeryLarge}"/>
         <!--<Setter Property="Background" Value="{StaticResource GradientBrushForTitle}"></Setter>-->
         
     </Style>
+
+    <Style TargetType="{x:Type TextBox}" x:Key="LoginField">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+        <Setter Property="FontFamily" Value="{StaticResource VCR_OSD}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Margin" Value="10 0 5 15"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundLightBrush}"/>
+        <Setter Property ="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Border x:Name="LoginFieldBorder"
+                                    CornerRadius="10"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    SnapsToDevicePixels="True">
+                                <TextBlock Focusable ="False"
+                                           FontFamily="{TemplateBinding FontFamily}"
+                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                           Margin="{TemplateBinding Padding}"
+                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                           VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+    </Style>
+
+    
 </ResourceDictionary>

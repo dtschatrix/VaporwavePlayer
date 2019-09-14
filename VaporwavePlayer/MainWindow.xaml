@@ -78,7 +78,7 @@
                                         <!-- Title -->
                                         <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
                                             <TextBlock Style="{StaticResource Text}">
-                                                <Run Text="V A P O R M E M O R Y"/>
+                                                <Run Text="V  A  P  O  R  M  E  M  O  R  Y"/>
                                             </TextBlock>
                                         </Viewbox>
                                         
