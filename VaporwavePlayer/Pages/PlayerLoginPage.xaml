@@ -38,8 +38,8 @@
                                        FontFamily="{StaticResource ThunderStrike3D}"
                                        Foreground="{StaticResource MainTextColorBrush}"/>
 
-                            <TextBox Style="{StaticResource LoginField}"/>
-                            <TextBox Style="{StaticResource LoginField}"/>
+                            <TextBox Style="{StaticResource LoginField }" Tag="Nickname"/>
+                            <PasswordBox Style="{StaticResource PassField}" Tag="Password"/>
                             
                             <Button Style="{StaticResource LoginPageNextText}" Content="Next "></Button>
                             <Button Style="{StaticResource LoginPageText}" Content="I already have an account"></Button>

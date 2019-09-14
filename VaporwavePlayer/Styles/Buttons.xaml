@@ -158,10 +158,11 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource ActiveButtonColorBrush}"></Setter>
+                            <Setter Property="Background" Value="{StaticResource ActiveButtonColorBrush}"></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource MainExtraTextColorBrush}"></Setter>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Foreground" Value="{StaticResource ForegroundVeryDarkBrush}"></Setter>
+                            <Setter Property="Background" Value="{StaticResource ForegroundVeryDarkBrush}"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
