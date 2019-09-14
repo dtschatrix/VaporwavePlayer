@@ -15,7 +15,8 @@
                                 ImageSource="../resources/backgrounds/Sunset_vaporwave.jpg"
                                 RenderOptions.BitmapScalingMode="Fant"/>
             </Grid.Background>
-            <ScrollViewer>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <StackPanel
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"

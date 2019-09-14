@@ -37,21 +37,40 @@
         <Setter Property ="BorderThickness" Value="1"/>
             <Setter Property="Template">
                 <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type TextBox}">
-                            <Border x:Name="LoginFieldBorder"
+                        <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                    <Grid>
+                        <Border x:Name="LoginFieldBorder"
                                     CornerRadius="10"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     Background="{TemplateBinding Background}"
                                     SnapsToDevicePixels="True">
-                                <TextBlock Focusable ="False"
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                        </Border>
+                        <TextBlock 
+                                           IsHitTestVisible="False"
+                                           Text="{TemplateBinding Tag}"
+                                           x:Name="placeholder"
+                                           Focusable ="True"
                                            FontFamily="{TemplateBinding FontFamily}"
                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                            Margin="{TemplateBinding Padding}"
                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                           VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
-                            </Border>
-                        </ControlTemplate>
+                                           VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                    </Grid>
+                </ControlTemplate>
                 </Setter.Value>
             </Setter>
     </Style>
