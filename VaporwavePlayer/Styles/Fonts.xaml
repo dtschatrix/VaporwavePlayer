@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:VaporwavePlayer"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+
+    <FontFamily x:Key ="VCR_OSD">pack://applicaton;,,,/resources/Fonts/#VCR OSD Mono</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="MenuText">
+        <Setter Property="FontFamily" Value="{StaticResource VCR_OSD}"></Setter>
+    </Style>
+
+    <FontFamily x:Key ="ThunderStrike3D">pack://applicaton;,,,/resources/Fonts/#Thunderstrike 3D</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrike3D}"></Setter>
+    </Style>
+    <FontFamily x:Key ="ThunderStrikeItalic">pack://applicaton;,,,/resources/Fonts/#Thunderstrike Italic</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="ExtraStyleFonts">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrikeItalic}"></Setter>
+    </Style>
+    <FontFamily x:Key ="ThunderStrikeGradient">pack://applicaton;,,,/resources/Fonts/#Thunderstrike Gradient</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyleTitle">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrikeGradient}"></Setter>
+    </Style>
+    <FontFamily x:Key ="ThunderStrikeHalf">pack://applicaton;,,,/resources/Fonts/#Thunderstrike Halftone</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyleHalfGrad">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrikeHalf}"></Setter>
+    </Style>
+    <FontFamily x:Key ="ChicagoFLF">pack://applicaton;,,,/resources/Fonts/#ChicagoFLF</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyleChicago">
+        <Setter Property="FontFamily" Value="{StaticResource ChicagoFLF}"></Setter>
+    </Style>
+    <FontFamily x:Key ="FasterOne">pack://applicaton;,,,/resources/Fonts/#Faster One</FontFamily>
+    <Style TargetType="{x:Type Control}" x:Key="FasterOneFont">
+        <Setter Property="FontFamily" Value="{StaticResource FasterOne}"></Setter>
+    </Style>
+
+<Style TargetType="{x:Type TextBlock}" x:Key="BaseStyleText">
+        <Setter Property="FontFamily" Value="{StaticResource ThunderStrike3D}"></Setter>
+    </Style>
+        
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseStyleText}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}" />
+
+
+    <system:Double x:Key ="FontSizeRegular">20</system:Double>
+    <system:Double x:Key ="FontSizeSmall">14</system:Double>
+    <system:Double x:Key ="FontSizeLarge">30</system:Double>
+    <system:Double x:Key ="FontSizeVeryLarge">40</system:Double>
+    <system:Double x:Key="FontSizeVerySmall"> 10</system:Double>
+
+
+</ResourceDictionary>

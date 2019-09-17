@@ -13,18 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace VaporwavePlayer
+namespace VaporwavePlayer.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PlayerLoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PlayerLoginPage : BasePage
     {
-        public MainWindow()
+        public PlayerLoginPage()
         {
-           
             InitializeComponent();
-            DataContext = new WindowViewModel(this);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.AnimateOut();
         }
     }
 }

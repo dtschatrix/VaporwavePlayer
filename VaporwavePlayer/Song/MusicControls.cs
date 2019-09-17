@@ -25,9 +25,11 @@ namespace VaporwavePlayer
 
         #region Properties
         public PlaybackState PlaybackState => _soundOut?.PlaybackState ?? PlaybackState.Stopped;
-        public TimeSpan MusDuration => _waveSource?.GetPosition() ?? TimeSpan.Zero;
-        public TimeSpan Length => _waveSource?.GetLength() ?? TimeSpan.Zero;
-
+        public TimeSpan MusicDuration => _waveSource?.GetPosition() ?? TimeSpan.Zero;
+        public TimeSpan MusicLength => _waveSource?.GetLength() ?? TimeSpan.Zero;
+        /// <summary>
+        /// property for changing volume
+        /// </summary>
         public int Volume
         {
             get => _soundOut != null ? Math.Min(100, Math.Max((int)(_soundOut.Volume * 100), 0)) : 20;
