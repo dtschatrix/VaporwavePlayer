@@ -18,11 +18,16 @@ namespace VaporwavePlayer.Pages
     /// <summary>
     /// Interaction logic for PlayerLoginPage.xaml
     /// </summary>
-    public partial class PlayerLoginPage : Page
+    public partial class PlayerLoginPage : BasePage
     {
         public PlayerLoginPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.AnimateOut();
         }
     }
 }

@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /VaporwavePlayer/Pages/BasePage.cs
 /VaporwavePlayer/Animation/PageAnimation.cs
+/VaporwavePlayer/AttachedHelpers/TextBoxHelper.cs

@@ -81,7 +81,7 @@
     <Style x:Key="LoginPageText" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="Foreground" Value ="{StaticResource MainTextColorBrush}"/>
         <Setter Property="FontFamily" Value="{StaticResource ThunderStrikeItalic}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontSizeVerySmall}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}"></Setter>
         <Setter Property="HorizontalAlignment" Value ="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="5 5 10 0"/>

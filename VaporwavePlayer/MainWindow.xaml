@@ -27,7 +27,7 @@
 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundLightBrush}"
+                                        Background="{StaticResource ForegroundLightBrush}"
                                         CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
 
                                 <!-- Window border and dropshadown -->
@@ -115,10 +115,15 @@
             />
     </WindowChrome.WindowChrome>
 
-    <Grid Background="{StaticResource ForegroundLightBrush}">
+    <Border Background="{StaticResource ActivePanelBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
+             </Grid.Background>
         <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-
-    </Grid>
+        </Grid>
+    </Border>
+    
 
 </Window>
   
