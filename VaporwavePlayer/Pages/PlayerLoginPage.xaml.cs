@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,16 +19,16 @@ namespace VaporwavePlayer.Pages
     /// <summary>
     /// Interaction logic for PlayerLoginPage.xaml
     /// </summary>
-    public partial class PlayerLoginPage : BasePage
+    public partial class PlayerLoginPage: BasePage<LoginPageViewModel>, IHavePassword
     {
         public PlayerLoginPage()
         {
             InitializeComponent();
+            
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.AnimateOut();
-        }
+
+        public SecureString securePassword => PasswordText.SecurePassword;
     }
 }

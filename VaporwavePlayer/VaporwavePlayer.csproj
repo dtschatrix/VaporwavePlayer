@@ -86,18 +86,22 @@
     <Compile Include="Animation\BasePageAnimations.cs" />
     <Compile Include="Animation\PageAnimation.cs" />
     <Compile Include="Animation\StoryboardHelpers.cs" />
-    <Compile Include="AttachedHelpers\TextBoxHelper.cs" />
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
-    <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="AttachedProperties\PasswordBoxAttachedProperties .cs" />
+    <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
     <Compile Include="DataModels\ApplicationPage.cs" />
+    <Compile Include="Experessions\ExpressionHelpers.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\PlayerLoginPage.xaml.cs">
       <DependentUpon>PlayerLoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Security\SecureStringHelpers.cs" />
     <Compile Include="Song\Song.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Base\IHavePassword.cs" />
+    <Compile Include="ViewModels\Base\RelayCommandParameterized.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />

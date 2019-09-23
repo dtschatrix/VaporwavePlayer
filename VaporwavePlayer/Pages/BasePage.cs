@@ -25,20 +25,20 @@ using System.Windows.Media.Animation;
 
         public float SlideSeconds { get; set; } = 0.8f;
 
-        public VM ViewModel
-        {
-            get { return mViewModel; }
-            set
+            public VM ViewModel
             {
-                if (mViewModel == null)
-                    return;
+                get => ViewModel;
+                set
+                {
+                    // If nothing has changed => return
+                    if (mViewModel == value)
+                        return;
 
-                mViewModel = value;
-                //set the data context for this page
-                this.DataContext = mViewModel;
+                    mViewModel = value;
+                    //set the data Context
+                    this.DataContext = mViewModel;
+                }
             }
-
-        }
 
         #endregion
 
@@ -53,8 +53,7 @@ using System.Windows.Media.Animation;
                 this.Visibility = Visibility.Collapsed;
             this.Loaded += BasePage_Loaded;
             this.ViewModel = new VM();
-
-        }
+            }
 
 
 
