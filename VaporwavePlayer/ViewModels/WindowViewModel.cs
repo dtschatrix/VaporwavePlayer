@@ -64,7 +64,7 @@ namespace VaporwavePlayer
         /// </summary>
         public Thickness InnerContentPadding { get; set; } = new Thickness(0);
 
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.MainPlayerWindow;
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow

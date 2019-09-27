@@ -17,6 +17,8 @@ namespace VaporwavePlayer
             {
                 case ApplicationPage.Login:
                     return new PlayerLoginPage();
+                case ApplicationPage.MainPlayerWindow:
+                    return new MainPlayerWindow();
 
                 default:
                     Debugger.Break();

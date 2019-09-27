@@ -78,7 +78,7 @@
                                         <!-- Title -->
                                         <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
                                             <TextBlock Style="{StaticResource Text}">
-                                                <Run Text="V  A  P  O  R  M  E  M  O  R  Y"/>
+                                                <Run Text="V A P O R E M O R Y"/>
                                             </TextBlock>
                                         </Viewbox>
                                         
@@ -114,16 +114,46 @@
             GlassFrameThickness="0"
             />
     </WindowChrome.WindowChrome>
-
-    <Border Background="{StaticResource ActivePanelBrush}">
-        <Grid>
-            <Grid.Background>
-                <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
-             </Grid.Background>
-        <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-        </Grid>
-    </Border>
     
+    
+    <Border Background="{StaticResource ForegroundMainBrush}">
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+                <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
+         </Grid.Background>
+            <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+               
+            
+            <Grid>
+               
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height ="*"/>
+                </Grid.RowDefinitions>
+               <Grid Height="115" Background="{StaticResource ForegroundSideMenuColorBrush}">
+                    <StackPanel Orientation="Vertical">
+                        <Button Style="{StaticResource SlideMenuButton}" Content ="Random"/>
+                        <Button Style="{StaticResource SlideMenuButton}" Content ="Sort"/>
+                        <Button Style="{StaticResource SlideMenuButton}" Content ="Search"/>
+                    </StackPanel>
+
+
+               </Grid>
+            </Grid>
+
+
+
+          </Grid>
+
+
+
+
+    </Border>
 
 </Window>
   

@@ -92,6 +92,9 @@
     <Compile Include="DataModels\ApplicationPage.cs" />
     <Compile Include="Experessions\ExpressionHelpers.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\MainPlayerWindow.xaml.cs">
+      <DependentUpon>MainPlayerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PlayerLoginPage.xaml.cs">
       <DependentUpon>PlayerLoginPage.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\MainPlayerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PlayerLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +217,7 @@
     <Resource Include="resources\icons\trashcan.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="resources\gifs\vapor_palm.gif" />
     <Resource Include="resources\backgrounds\Sunset_vaporwave.jpg" />
     <Resource Include="resources\icons\windowedmode.png" />
     <Resource Include="resources\icons\small_logo_25px.png" />

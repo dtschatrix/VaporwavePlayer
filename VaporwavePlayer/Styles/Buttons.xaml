@@ -183,4 +183,22 @@
     </Style>
 
 
+
+    <!--TODO create style for slidemenu buttons -->
+       <Style x:Key="SlideMenuButton" TargetType= "{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
+           <Setter Property="Foreground" Value ="{StaticResource ForegroundVeryDarkBrush}"/>
+           <Setter Property="Background" Value="{StaticResource MainExtraTextColorBrush}"/>
+           <Setter Property="FontFamily" Value="{StaticResource ChicagoFLF }"/>
+           <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}"></Setter>
+           <Setter Property="HorizontalAlignment" Value ="Center"/>
+           <Setter Property="VerticalAlignment" Value="Center"/>
+           <Setter Property="Padding" Value="4 0 10 0"></Setter>
+           <Setter Property="Margin" Value="10 5"></Setter>
+
+
+
+
+
+       </Style>
+
 </ResourceDictionary>
