@@ -34,9 +34,10 @@
         <Setter Property="FontFamily" Value="{StaticResource FasterOne}"></Setter>
     </Style>
 
+    
 <Style TargetType="{x:Type TextBlock}" x:Key="BaseStyleText">
-        <Setter Property="FontFamily" Value="{StaticResource ThunderStrike3D}"></Setter>
-    </Style>
+        <Setter Property="FontFamily" Value="{StaticResource ChicagoFLF}"></Setter>
+    </Style> 
         
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" />
     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}" />

@@ -6,10 +6,10 @@
     <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}"></SolidColorBrush>
     
     <Color x:Key="ActivePanel">#0000aa</Color>
-    <SolidColorBrush x:Key="ActivePanelBrush" Color="{StaticResource ActivePanel}"></SolidColorBrush>
+    <SolidColorBrush x:Key="ActivePanelBrush" Color="{StaticResource ActivePanel}"/>
 
     <Color x:Key="NonActivePanel">#808080</Color>
-    <SolidColorBrush x:Key="NonActivePanelBrush" Color="{StaticResource NonActivePanel}"></SolidColorBrush>
+    <SolidColorBrush x:Key="NonActivePanelBrush" Color="{StaticResource NonActivePanel}"/>
 
     <Color x:Key="ForegroundMain">#686868</Color>
     <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}" />
@@ -27,7 +27,10 @@
     <SolidColorBrush x:Key="MainExtraTextColorBrush" Color="{StaticResource MainExtraTextColor}"/>
 
     <Color x:Key="MagentaTextColor">#ff71ce</Color>
-    <SolidColorBrush x:Key="MagentaTextColorBrush" Color="{StaticResource MagentaTextColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="MagentaTextColorBrush" Color="{StaticResource MagentaTextColor}"/>
+
+    <Color x:Key="SlideTextButtonColor">#b967ff</Color>
+    <SolidColorBrush x:Key="SlideTextButtonColorBrush" Color="{StaticResource SlideTextButtonColor}"/>
 
     <Color x:Key="ExtraTextColor">#996515</Color>
     <SolidColorBrush x:Key="ExtraTextColorBrush" Color="{StaticResource ExtraTextColor}"/>
@@ -36,6 +39,6 @@
     <SolidColorBrush x:Key="ForegroundSideMenuColorBrush" Color="{StaticResource ForegroundSideMenuColor}" Opacity="0.5"/>
 
     <Color x:Key="ActiveButtonColor">#5c1805</Color>
-    <SolidColorBrush x:Key="ActiveButtonColorBrush" Color="{StaticResource ActiveButtonColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="ActiveButtonColorBrush" Color="{StaticResource ActiveButtonColor}"/>
 
 </ResourceDictionary>
