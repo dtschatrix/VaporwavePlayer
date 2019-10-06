@@ -52,5 +52,11 @@
     <system:Double x:Key ="FontSizeVeryLarge">40</system:Double>
     <system:Double x:Key="FontSizeVerySmall"> 10</system:Double>
 
+    <system:String x:Key="ChicagoSearchIcon">&#x1F50E;</system:String>
+    <system:String x:Key="ChicagoDiceIcon">&#x1F3B2;</system:String>
+    <system:String x:Key="ChicagoUpDownArrow">&#8645;</system:String>
+    <system:String x:Key="ChicagoDownUpArrow">&#8693;</system:String>
+
+
 
 </ResourceDictionary>

@@ -41,4 +41,7 @@
     <Color x:Key="ActiveButtonColor">#5c1805</Color>
     <SolidColorBrush x:Key="ActiveButtonColorBrush" Color="{StaticResource ActiveButtonColor}"/>
 
+    <Color x:Key="SideMenuForegroundColor">#E3A857</Color>
+    <SolidColorBrush x:Key="SideMenuForegroundColorBrush" Color="{StaticResource SideMenuForegroundColor}" Opacity ="0.8"/>
+
 </ResourceDictionary>

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="VaporwavePlayer.SideMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaporwavePlayer"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Template>
+        <ControlTemplate TargetType="UserControl">
+            <Border BorderBrush="{StaticResource SideMenuForegroundColorBrush}" BorderThickness="3">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height ="*"/>
+                    </Grid.RowDefinitions>
+                   
+                        <Grid Height="50" Background="{StaticResource ForegroundSideMenuColorBrush}">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width ="Auto"/>
+
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoDiceIcon}"/>
+                                    <Button Style="{StaticResource SlideMenuSortButton}" Content ="{StaticResource ChicagoUpDownArrow}"/>
+                                    <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoSearchIcon}"/>
+                                </StackPanel>
+                            </Grid>
+
+                    <ContentPresenter Grid.Row="1"/>
+
+                </Grid>
+
+               
+            </Border>
+        </ControlTemplate>
+    </UserControl.Template>
+
+   
+
+</UserControl>

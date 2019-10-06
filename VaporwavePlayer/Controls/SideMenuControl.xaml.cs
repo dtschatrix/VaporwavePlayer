@@ -16,16 +16,13 @@ using System.Windows.Shapes;
 namespace VaporwavePlayer
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SideMenuControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SideMenuControl : UserControl
     {
-        public MainWindow()
+        public SideMenuControl()
         {
-           
             InitializeComponent();
-            DataContext = new WindowViewModel(this);
         }
-
     }
 }

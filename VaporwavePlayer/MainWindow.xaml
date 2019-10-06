@@ -120,37 +120,17 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
         <Grid.Background>
                 <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
          </Grid.Background>
-            <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-
-            <Border BorderBrush="{StaticResource ForegroundSideMenuColorBrush}" CornerRadius="0 0 20 20" BorderThickness="10">
-            <Grid>
-               
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height ="*"/>
-                </Grid.RowDefinitions>
+        <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+        <local:SideMenuControl Grid.Column="0">
             
-                <Grid Height="50">
-                        
-                        <StackPanel Background="{StaticResource ForegroundSideMenuColorBrush}" Orientation="Horizontal">
-                            <Button Style="{StaticResource SlideMenuButton}" Content ="Random"/>
-                            <Button Style="{StaticResource SlideMenuButton}" Content ="Sort"/>
-                            <Button Style="{StaticResource SlideMenuButton}" Content ="Search"/>
-                        </StackPanel>
-
-                           
-            </Grid>
-            
-        </Grid>
-        </Border>
-
+        </local:SideMenuControl>
 
 
     </Grid>
