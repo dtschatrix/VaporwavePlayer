@@ -33,7 +33,7 @@
     <SolidColorBrush x:Key="SlideTextButtonColorBrush" Color="{StaticResource SlideTextButtonColor}"/>
 
     <Color x:Key="ExtraTextColor">#996515</Color>
-    <SolidColorBrush x:Key="ExtraTextColorBrush" Color="{StaticResource ExtraTextColor}"/>
+    <SolidColorBrush x:Key="ExtraTextColorBrush" Color="{StaticResource ExtraTextColor}" Opacity="0.5"/>
 
     <Color x:Key="ForegroundSideMenuColor">#b967ff</Color>
     <SolidColorBrush x:Key="ForegroundSideMenuColorBrush" Color="{StaticResource ForegroundSideMenuColor}" Opacity="0.5"/>
@@ -41,7 +41,7 @@
     <Color x:Key="ActiveButtonColor">#5c1805</Color>
     <SolidColorBrush x:Key="ActiveButtonColorBrush" Color="{StaticResource ActiveButtonColor}"/>
 
-    <Color x:Key="SideMenuForegroundColor">#E3A857</Color>
-    <SolidColorBrush x:Key="SideMenuForegroundColorBrush" Color="{StaticResource SideMenuForegroundColor}" Opacity ="0.8"/>
+    <Color x:Key="SideMenuForegroundColor">#fb9062</Color>
+    <SolidColorBrush x:Key="SideMenuForegroundColorBrush" Color="{StaticResource SideMenuForegroundColor}" Opacity ="0.9"/>
 
 </ResourceDictionary>

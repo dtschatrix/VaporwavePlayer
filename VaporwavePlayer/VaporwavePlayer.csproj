@@ -89,6 +89,12 @@
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties .cs" />
     <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
+    <Compile Include="Controls\MusicListControl.xaml.cs">
+      <DependentUpon>MusicListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MusicListItemControl.xaml.cs">
+      <DependentUpon>MusicListItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
     </Compile>
@@ -104,14 +110,27 @@
     <Compile Include="Security\SecureStringHelpers.cs" />
     <Compile Include="Song\Song.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
+    <Compile Include="ValueConverters\StringToImageSourceConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\IHavePassword.cs" />
     <Compile Include="ViewModels\Base\RelayCommandParameterized.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\Player\DesignModels\MusicListItemDesignModel.cs" />
+    <Compile Include="ViewModels\Player\DesignModels\MusicListDesignModel.cs" />
+    <Compile Include="ViewModels\Player\MusicListViewModel.cs" />
+    <Compile Include="ViewModels\Player\MusicListItemViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
+    <Page Include="Controls\MusicListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MusicListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\SideMenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,6 +250,7 @@
     <Resource Include="resources\backgrounds\aquarium_vaporwave.png" />
     <Resource Include="resources\backgrounds\comet_vaporwave.jpg" />
     <Resource Include="resources\backgrounds\dolphins_vaporwave.jpg" />
+    <Resource Include="resources\backgrounds\floralshoppe.jpg" />
     <Content Include="resources\backgrounds\sad_face_vaporwave.jfif" />
     <Resource Include="resources\backgrounds\Shoes_vaporwave.gif" />
     <Resource Include="resources\backgrounds\statue-vaporwave.png" />

@@ -9,7 +9,7 @@
     
     <UserControl.Template>
         <ControlTemplate TargetType="UserControl">
-            <Border BorderBrush="{StaticResource SideMenuForegroundColorBrush}" BorderThickness="3">
+            <Border BorderBrush="{StaticResource ForegroundSideMenuColorBrush}" BorderThickness="3">
                 <Grid>
 
                     <Grid.RowDefinitions>

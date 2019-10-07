@@ -128,8 +128,8 @@
                 <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
          </Grid.Background>
         <Frame x:Name="MainFrame" Content ="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-        <local:SideMenuControl Grid.Column="0">
-            
+        <local:SideMenuControl>
+            <local:MusicListControl/>
         </local:SideMenuControl>
 
 
