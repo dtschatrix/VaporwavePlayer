@@ -29,9 +29,14 @@ namespace VaporwavePlayer
         #endregion
 
         #region Commands
-
+        /// <summary>
+        /// Command to login
+        /// </summary>
         public ICommand LoginCommand { get; set; }
-
+        /// <summary>
+        /// Command to register
+        /// </summary>
+        public ICommand RegisterCommand { get; set; }
         #endregion
 
         #region Constructor
@@ -42,24 +47,45 @@ namespace VaporwavePlayer
         public LoginPageViewModel()
         {
             LoginCommand = new RelayCommandParameterized(async(parameter) => await Login(parameter));
-
+            RegisterCommand = new RelayCommand(async()=> await Register());
         }
 
         
         #endregion
 
+        /// <summary>
+        /// Takes the user to login page
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public async Task Login(object parameter)
         {
             await RunCommand(() => this.LoginIsRunning, async () =>
             {
                 await Task.Delay(500);
-                var login = this.LocalLogin;
+                var login = LocalLogin;
                 //TODO overwrite this.
                // var pass = (parameter as IHavePassword)?.securePassword.Unsecure();
             });
 
         }
 
+        /// <summary>
+        /// Takes the user to register page
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
+        public async Task Register()
+        {
+            await RunCommand(() => this.LoginIsRunning, async () =>
+            {
+                //TODO: go to register page
+                ((WindowViewModel) ((MainWindow) Application.Current.MainWindow).DataContext).CurrentPage =
+                        ApplicationPage.Register;
+                await Task.Delay(1);
+            });
+
+        }
 
     }
 }

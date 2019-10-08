@@ -13,6 +13,11 @@
         /// <summary>
         /// Music Player page
         /// </summary>
-        MainPlayerWindow = 1
+        MainPlayerWindow = 1,
+
+        /// <summary>
+        /// Register page
+        /// </summary>
+        Register = 2
     }
 }

@@ -104,6 +104,9 @@
     <Compile Include="Pages\MainPlayerWindow.xaml.cs">
       <DependentUpon>MainPlayerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PlayerRegisterPage.xaml.cs">
+      <DependentUpon>PlayerRegisterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PlayerLoginPage.xaml.cs">
       <DependentUpon>PlayerLoginPage.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
     <Page Include="Pages\MainPlayerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlayerRegisterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\PlayerLoginPage.xaml">
       <SubType>Designer</SubType>

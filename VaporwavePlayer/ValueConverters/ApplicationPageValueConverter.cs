@@ -13,12 +13,16 @@ namespace VaporwavePlayer
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            //switch for all pages in application
             switch ((ApplicationPage)value)
             {
                 case ApplicationPage.Login:
                     return new PlayerLoginPage();
                 case ApplicationPage.MainPlayerWindow:
                     return new MainPlayerWindow();
+                case ApplicationPage.Register:
+                    return new PlayerRegisterPage();
+    
 
                 default:
                     Debugger.Break();

@@ -23,6 +23,15 @@ namespace VaporwavePlayer.ViewModels
         /// Display the image of the album
         /// </summary>
         public string PathToAlbumImage { get; set; }
+        
+        /// <summary>
+        /// True if current song is playing
+        /// </summary>
+        public bool SongIsChosen { get; set; }
+        /// <summary>
+        /// True if item is selected
+        /// </summary>
+        public bool IsSelected { get; set; }
 
     }
 }

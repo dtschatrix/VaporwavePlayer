@@ -1,4 +1,4 @@
-﻿<local:BasePage x:TypeArguments="local:LoginPageViewModel" x:Class="VaporwavePlayer.Pages.PlayerLoginPage"
+﻿<local:BasePage x:TypeArguments="local:LoginPageViewModel" x:Class="VaporwavePlayer.PlayerRegisterPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -27,7 +27,7 @@
 
                         <StackPanel>
 
-                            <TextBlock Text = "Sign in"
+                            <TextBlock Text = "Sign up"
                                        Padding="10 0 10 15"
                                        FontSize="{StaticResource FontSizeVeryLarge}"
                                        FontFamily="{StaticResource ThunderStrike3D}"
@@ -39,12 +39,10 @@
 
                             <Button Style = "{StaticResource LoginPageNextText}"
                                     local:IsBusyProperty.Value="{Binding LoginIsRunning}"
-                                    Content="Login" 
-                                    Command="{Binding LoginCommand}"
-                                    CommandParameter="{Binding ElementName=Page}"/>
-                            <Button Style = "{StaticResource LoginPageText}"
+                                    Content="Register" 
                                     Command="{Binding RegisterCommand}"
-                                    Content="Create new account"/>
+                                    CommandParameter="{Binding ElementName=Page}"/>
+                            <Button Style = "{StaticResource LoginPageText}" Content="I already have an account"/>
 
 
 

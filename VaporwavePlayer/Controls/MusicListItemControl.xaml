@@ -6,47 +6,99 @@
              xmlns:local="clr-namespace:VaporwavePlayer"
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="300">
+
+
+        <UserControl.Resources>
+            <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ContentControl}">
+                        
+                            <Border x:Name="background">
+                            <Grid x:Name="container"  Background="Transparent">
+                                <Grid.ColumnDefinitions>
+                                    <!--Active track panel -->
+                                    <!--Album Picture -->
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border
+                                        Background="{StaticResource MagentaTextColorBrush}"
+                                        Width="3"
+                                        HorizontalAlignment ="Left"
+                                        Visibility="{Binding SongIsChosen, Converter={local:BooleanToVisibilityConverter}, ConverterParameter=True}"/>
+
+                                <Image Grid.Column="0" Margin="5"  Source="{Binding Path=PathToAlbumImage, Converter={local:StringToImageSourceConverter}}"/>
+
+
+                                <!--Album picture -->
+                                <Border Grid.Column="1" Padding="10">
+                                   
+                                
+                                    <StackPanel  VerticalAlignment="Stretch">
+                                        <!--Artist name -->
+                                        <TextBlock Text="{Binding ArtistName}"
+                                                   Foreground="{StaticResource ForegroundVeryDarkBrush}"
+                                                   FontFamily="{StaticResource ChicagoFLF}"
+                                                   FontSize="{StaticResource FontSizeVerySmall}"
+                                                   TextTrimming="WordEllipsis"/>
+                                        <!--Song name and duration -->
+                                        <TextBlock Text="{Binding SongName}"
+                                                   Foreground="{StaticResource ForegroundLightBrush}"
+                                                   FontFamily="{StaticResource ChicagoFLF}"
+                                                   FontSize="{StaticResource FontSizeVerySmall}"
+                                                   TextTrimming="CharacterEllipsis"/>
+                                        <TextBlock Text="{Binding SongDuration}"
+                                                   Padding="5 3 0 0"
+                                                   FontFamily="{StaticResource ThunderStrikeItalic}"
+                                                   FontSize="{StaticResource FontSizeVerySmall}"/>
+
+
+                                    </StackPanel>
+                                </Border>
+
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter Property="Background" TargetName="background" Value="{StaticResource SideMenuForegroundColorBrush}"/>
+                            </DataTrigger>
+
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource ExtraTextColor}" Duration="0:0:0.3" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="Transparent" Duration="0:0:0.3" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="container" Value="{StaticResource SideMenuForegroundColor}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                       </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+        </UserControl.Resources>
+
+
+
+    <ContentControl d:DataContext="{x:Static local:MusicListDesignModel.Instance}"
+                    Style="{StaticResource ContentStyle}">
+      
+    </ContentControl>
     
-    
-    
-    
-    <Grid d:DataContext="{x:Static local:MusicListItemDesignModel.Instance}" Background="{StaticResource SideMenuForegroundColorBrush}">
-        <Grid.ColumnDefinitions>
-            <!--Active track panel -->
-            <ColumnDefinition Width="Auto"/>
-            <!--Album Picture -->
-            <ColumnDefinition Width="75"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Border Background="#6a0d83" Width="7"/>
-
-        
-        <!--Album picture -->
-        <Image Grid.Column="1" Source="{Binding Path=PathToAlbumImage, Converter={local:StringToImageSourceConverter}}"/>
-
-
-        <Border Grid.Column="2" Padding="10">
-        <StackPanel  VerticalAlignment="Stretch">
-            <!--Artist name -->
-            <TextBlock Text="{Binding ArtistName}"
-                       Foreground="{StaticResource ForegroundVeryDarkBrush}"
-                       FontFamily="{StaticResource ChicagoFLF}"
-                       FontSize="{StaticResource FontSizeVerySmall}"
-                       TextTrimming="WordEllipsis"/>
-            <!--Song name and duration -->
-                <TextBlock Text="{Binding SongName}"
-                           Foreground="{StaticResource ForegroundLightBrush}"
-                           FontFamily="{StaticResource ChicagoFLF}"
-                           FontSize="{StaticResource FontSizeVerySmall}"
-                           TextTrimming="CharacterEllipsis"/>
-                <TextBlock Text="{Binding SongDuration}"
-                           Padding="5 3 0 0"
-                           FontFamily="{StaticResource ThunderStrikeItalic}"
-                           FontSize="{StaticResource FontSizeVerySmall}"/>
-
-
-        </StackPanel>
-        </Border>
-
-    </Grid>
+   
 </UserControl>

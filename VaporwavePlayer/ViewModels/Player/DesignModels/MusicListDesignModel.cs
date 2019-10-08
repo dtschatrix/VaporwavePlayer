@@ -28,7 +28,9 @@ namespace VaporwavePlayer
                     SongName = @"リサフランク420 / 現代のコンピュ",
                     ArtistName = "Macintosh Plus",
                     SongDuration = "0:00 – 4:20",
-                    PathToAlbumImage = @"/resources/backgrounds/floralshoppe.jpg"
+                    PathToAlbumImage = @"/resources/backgrounds/floralshoppe.jpg",
+                    SongIsChosen = true,
+                    
                 },
                 new MusicListItemViewModel
                 {
@@ -42,7 +44,9 @@ namespace VaporwavePlayer
                     SongName = @"ライブラリ",
                     ArtistName = "Macintosh Plus",
                     SongDuration = "0:00 – 19:10",
-                    PathToAlbumImage = @"/resources/backgrounds/floralshoppe.jpg"
+                    PathToAlbumImage = @"/resources/backgrounds/floralshoppe.jpg",
+                    IsSelected = true
+                    
                 },
             };
 

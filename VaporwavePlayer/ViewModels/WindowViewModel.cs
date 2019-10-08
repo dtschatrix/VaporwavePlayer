@@ -57,50 +57,36 @@ namespace VaporwavePlayer
         /// <summary>
         /// The size of the resize border around the window, taking into account the outer margin
         /// </summary>
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
+        public Thickness ResizeBorderThickness => new Thickness(ResizeBorder + OuterMarginSize);
 
         /// <summary>
         /// The padding of the inner content of the main window
         /// </summary>
         public Thickness InnerContentPadding { get; set; } = new Thickness(0);
 
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.MainPlayerWindow;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
         public int OuterMarginSize
         {
-            get
-            {
-                // If it is maximized or docked, no border
-                return Borderless ? 0 : mOuterMarginSize;
-            }
-            set
-            {
-                mOuterMarginSize = value;
-            }
+            get => Borderless ? 0 : mOuterMarginSize;
+            set => mOuterMarginSize = value;
         }
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
+        public Thickness OuterMarginSizeThickness => new Thickness(OuterMarginSize);
 
         /// <summary>
         /// The radius of the edges of the window
         /// </summary>
         public int WindowRadius
         {
-            get
-            {
-                // If it is maximized or docked, no border
-                return Borderless ? 0 : mWindowRadius;
-            }
-            set
-            {
-                mWindowRadius = value;
-            }
+            get => Borderless ? 0 : mWindowRadius;
+            set => mWindowRadius = value;
         }
 
         /// <summary>
