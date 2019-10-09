@@ -3,8 +3,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using VaporwavePlayer.Core;
 
-    namespace VaporwavePlayer
+namespace VaporwavePlayer
     {
         public class BasePage<VM> : Page
             where VM : BaseViewModel, new()

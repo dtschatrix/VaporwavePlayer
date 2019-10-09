@@ -1,4 +1,5 @@
 ﻿using System.Security;
+using VaporwavePlayer.Core;
 
 namespace VaporwavePlayer
 {

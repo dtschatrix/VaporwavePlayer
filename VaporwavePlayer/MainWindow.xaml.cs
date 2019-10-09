@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VaporwavePlayer.Core;
 
 namespace VaporwavePlayer
 {
@@ -20,8 +21,11 @@ namespace VaporwavePlayer
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public ApplicationViewModel ApplicationViewModel => new ApplicationViewModel();
         public MainWindow()
         {
+
            
             InitializeComponent();
             DataContext = new WindowViewModel(this);

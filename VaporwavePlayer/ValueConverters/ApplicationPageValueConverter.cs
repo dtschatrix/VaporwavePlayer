@@ -5,7 +5,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VaporwavePlayer.Pages;
+using VaporwavePlayer.Core;
+using VaporwavePlayer;
 
 namespace VaporwavePlayer
 {

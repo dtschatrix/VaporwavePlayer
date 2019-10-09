@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using VaporwavePlayer.Core;
 
 namespace VaporwavePlayer
 {
@@ -64,7 +65,7 @@ namespace VaporwavePlayer
         /// </summary>
         public Thickness InnerContentPadding { get; set; } = new Thickness(0);
 
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow

@@ -4,9 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VaporwavePlayer"
+             xmlns:core="clr-namespace:VaporwavePlayer.Core;assembly=VaporwavePlayer.Core"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid DataContext="{x:Static local:MusicListDesignModel.Instance}" Background="{StaticResource ExtraTextColorBrush}" >
+    <Grid DataContext="{x:Static core:MusicListDesignModel.Instance}" Background="{StaticResource ExtraTextColorBrush}" >
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <ItemsControl ItemsSource="{Binding Items}">
                     <ItemsControl.ItemTemplate>

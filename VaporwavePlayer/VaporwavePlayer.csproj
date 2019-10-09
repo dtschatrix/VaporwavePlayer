@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>VaporwavePlayer</RootNamespace>
     <AssemblyName>VaporwavePlayer</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -98,8 +98,6 @@
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataModels\ApplicationPage.cs" />
-    <Compile Include="Experessions\ExpressionHelpers.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\MainPlayerWindow.xaml.cs">
       <DependentUpon>MainPlayerWindow.xaml</DependentUpon>
@@ -110,20 +108,12 @@
     <Compile Include="Pages\PlayerLoginPage.xaml.cs">
       <DependentUpon>PlayerLoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Security\SecureStringHelpers.cs" />
     <Compile Include="Song\Song.cs" />
+    <Compile Include="ValueConverters\IoCConverter.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\StringToImageSourceConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
-    <Compile Include="ViewModels\Base\IHavePassword.cs" />
-    <Compile Include="ViewModels\Base\RelayCommandParameterized.cs" />
-    <Compile Include="ViewModels\LoginPageViewModel.cs" />
-    <Compile Include="ViewModels\Base\RelayCommand.cs" />
-    <Compile Include="ViewModels\Player\DesignModels\MusicListItemDesignModel.cs" />
-    <Compile Include="ViewModels\Player\DesignModels\MusicListDesignModel.cs" />
-    <Compile Include="ViewModels\Player\MusicListViewModel.cs" />
-    <Compile Include="ViewModels\Player\MusicListItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
     <Page Include="Controls\MusicListControl.xaml">
@@ -168,10 +158,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Buttons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\Windows.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -233,7 +219,12 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\VaporwavePlayer.Core\VaporwavePlayer.Core.csproj">
+      <Project>{d2dc74b5-12c5-4d38-8d85-18307cc69c02}</Project>
+      <Name>VaporwavePlayer.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
