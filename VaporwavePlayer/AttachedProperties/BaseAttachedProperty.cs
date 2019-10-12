@@ -10,14 +10,14 @@ namespace VaporwavePlayer
     /// <typeparam name="Parent">The parent class to be the attached property</typeparam>
     /// <typeparam name="Property">The type of this attached property</typeparam>
     public abstract class BaseAttachedProperty<Parent, Property>
-        where Parent : BaseAttachedProperty<Parent,Property>, new()
+        where Parent :  new()
     {
 
         #region Public Events
 
         public event Action<DependencyObject, DependencyPropertyChangedEventArgs> ValueChanged = (sender, e) => { };
 
-
+        public event Action<DependencyObject, object> ValueUpdated = (sender, value) => { };
         #endregion
 
         #region Public Properties
@@ -31,7 +31,13 @@ namespace VaporwavePlayer
         /// The attached property for this class
         /// </summary>
         public static readonly DependencyProperty ValueProperty = 
-            DependencyProperty.RegisterAttached("Value", typeof(Property),typeof(BaseAttachedProperty<Parent, Property>),new PropertyMetadata(new PropertyChangedCallback(OnValuePropertyChanged)));
+            DependencyProperty.RegisterAttached("Value",
+                typeof(Property),
+                typeof(BaseAttachedProperty<Parent, Property>),
+                new UIPropertyMetadata(
+                    default(Property),
+                    OnValuePropertyChanged,
+                    OnValuePropertyUpdated));
         /// <summary>
         /// The callback event when <see cref="ValueProperty"/> is changed
         /// </summary>
@@ -39,10 +45,19 @@ namespace VaporwavePlayer
         /// <param name="e">The arguments for the event</param>
         private static void OnValuePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            Instance.OnValueChanged(d, e);
+            (Instance as BaseAttachedProperty<Parent, Property>)?.OnValueChanged(d, e);
 
             //Call event listeners 
-            Instance.ValueChanged(d, e);
+            (Instance as BaseAttachedProperty<Parent, Property>)?.ValueChanged(d, e);
+        }
+        private static object OnValuePropertyUpdated(DependencyObject d, object value)
+        {
+            (Instance as BaseAttachedProperty<Parent, Property>)?.OnValueUpdated(d, value);
+
+            //Call event listeners 
+            (Instance as BaseAttachedProperty<Parent, Property>)?.ValueUpdated(d, value);
+
+            return value;
         }
         /// <summary>
         /// Gets the value of attached property
@@ -67,7 +82,7 @@ namespace VaporwavePlayer
         /// <param name="e">The arguments for this event</param>
         public virtual void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e) { }
 
-
+        public virtual void OnValueUpdated(DependencyObject sender, object value) {}
         #endregion
     }
 

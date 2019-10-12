@@ -6,7 +6,7 @@ namespace VaporwavePlayer
     /// <summary>
     /// Interaction logic for PlayerLoginPage.xaml
     /// </summary>
-    public partial class PlayerRegisterPage: BasePage<LoginPageViewModel>, IHavePassword
+    public partial class PlayerRegisterPage: BasePage<RegisterViewModel>, IHavePassword
     {
         public PlayerRegisterPage()
         {

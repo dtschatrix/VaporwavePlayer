@@ -6,18 +6,10 @@ using System.Windows.Media.Animation;
 using VaporwavePlayer.Core;
 
 namespace VaporwavePlayer
+{
+
+    public class BasePage : Page
     {
-        public class BasePage<VM> : Page
-            where VM : BaseViewModel, new()
-
-        {
-
-        #region Private Members
-
-        private VM mViewModel;
-
-        #endregion
-
         #region Public Properties
 
         public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromRight;
@@ -25,37 +17,22 @@ namespace VaporwavePlayer
         public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
 
         public float SlideSeconds { get; set; } = 0.8f;
-
-            public VM ViewModel
-            {
-                get => ViewModel;
-                set
-                {
-                    // If nothing has changed => return
-                    if (mViewModel == value)
-                        return;
-
-                    mViewModel = value;
-                    //set the data Context
-                    this.DataContext = mViewModel;
-                }
-            }
-
+        /// <summary>
+        /// a flag indicate which element should animate out
+        /// </summary>
+        public bool ShouldAnimateOut { get; set; }
         #endregion
 
-        #region Constructors
-
-        /// <summary>
-        /// Default constructor
-        /// </summary>
         public BasePage()
         {
             if (this.PageLoadAnimation != PageAnimation.None)
                 this.Visibility = Visibility.Collapsed;
             this.Loaded += BasePage_Loaded;
-            this.ViewModel = new VM();
-            }
 
+        }
+
+
+        #region Animation Load/Unload
 
 
         /// <summary>
@@ -65,7 +42,14 @@ namespace VaporwavePlayer
         /// <param name="e"></param>
         private async void BasePage_Loaded(object sender, RoutedEventArgs e)
         {
-            await AnimateIn();
+            if (ShouldAnimateOut)
+            {
+                await AnimateOut();
+            }
+            else
+            {
+                await AnimateIn();
+            }
         }
 
         public async Task AnimateIn()
@@ -103,6 +87,56 @@ namespace VaporwavePlayer
 
         #endregion
 
-
-        }
     }
+
+
+
+
+
+
+    public class BasePage<VM> : BasePage
+            where VM : BaseViewModel, new()
+
+    {
+
+        #region Private Members
+
+        private VM mViewModel;
+
+        #endregion
+
+        #region Public Properties
+
+
+        public VM ViewModel
+        {
+            get => ViewModel;
+            set
+            {
+                // If nothing has changed => return
+                if (mViewModel == value)
+                    return;
+
+                mViewModel = value;
+                //set the data Context
+                this.DataContext = mViewModel;
+            }
+        }
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public BasePage(): base()
+        {
+            ViewModel = new VM();
+        }
+
+        #endregion
+
+        
+    }
+}

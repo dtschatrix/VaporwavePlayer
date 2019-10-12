@@ -83,10 +83,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Animation\FrameworkElementAnimations.cs" />
     <Compile Include="Animation\BasePageAnimations.cs" />
     <Compile Include="Animation\PageAnimation.cs" />
     <Compile Include="Animation\StoryboardHelpers.cs" />
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
+    <Compile Include="AttachedProperties\NoFrameHistory.cs" />
+    <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties .cs" />
     <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
     <Compile Include="Controls\MusicListControl.xaml.cs">
@@ -94,6 +97,9 @@
     </Compile>
     <Compile Include="Controls\MusicListItemControl.xaml.cs">
       <DependentUpon>MusicListItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHost.xaml.cs">
+      <DependentUpon>PageHost.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
@@ -121,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\MusicListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

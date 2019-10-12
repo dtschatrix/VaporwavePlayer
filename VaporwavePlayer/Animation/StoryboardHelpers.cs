@@ -16,14 +16,15 @@ namespace VaporwavePlayer
         /// <param name="seconds">Duration of animation</param>
         /// <param name="offset">The distance from right to start from</param>
         /// <param name="decelerationRatio">The rate of deceleration    </param>
+        /// <param name="keepMargin">keep the element at the same width during animation</param>
         public static void AddSlideFromRight(this Storyboard storyboard, float seconds, double offset,
-            float decelerationRatio)
+            float decelerationRatio = 0.6f, bool keepMargin = true)
         {
 
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
-                From = new Thickness(offset, 0, -offset, 0),
+                From = new Thickness(keepMargin ? offset : 0, 0, -offset, 0),
                 To = new Thickness(0),
                 DecelerationRatio = decelerationRatio
 
@@ -41,14 +42,14 @@ namespace VaporwavePlayer
         /// <param name="offset">The distance from right to start from</param>
         /// <param name="decelerationRatio">The rate of deceleration    </param>
         public static void AddSlideToLeft(this Storyboard storyboard, float seconds, double offset,
-            float decelerationRatio)
+            float decelerationRatio = 0.6f, bool keepMargin = true)
         {
 
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = new Thickness(0),
-                To = new Thickness(-offset, 0, offset, 0),
+                To = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 DecelerationRatio = decelerationRatio
 
             };
@@ -58,9 +59,48 @@ namespace VaporwavePlayer
 
         }
 
+        /// <summary>
+        /// Adds a slide from left in animation to the storyboard
+        /// </summary>
+        /// <param name="storyboard">The storyboard to add animation</param>
+        /// <param name="seconds">Duration of animation</param>
+        /// <param name="offset">The distance from right to start from</param>
+        /// <param name="decelerationRatio">The rate of deceleration    </param>
+        public static void AddSlideFromLeft(this Storyboard storyboard, float seconds, double offset,
+            float decelerationRatio =0.6f, bool keepMargin = true)
+        {
 
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
+                To = new Thickness(0),
+                DecelerationRatio = decelerationRatio
 
+            };
+            //Set the target property name
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+            storyboard.Children.Add(animation);
 
+        }
+
+        public static void AddSlideToRight(this Storyboard storyboard, float seconds, double offset,
+            float decelerationRatio = 0.6f, bool keepMargin = true)
+        {
+
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = new Thickness(0),
+                To = new Thickness(keepMargin ? offset : 0, 0, -offset, 0),
+                DecelerationRatio = decelerationRatio
+
+            };
+            //Set the target property name
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+            storyboard.Children.Add(animation);
+
+        }
 
         /// <summary>
         /// Adds a fade in animation to storyboard
