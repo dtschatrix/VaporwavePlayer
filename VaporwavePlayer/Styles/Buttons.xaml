@@ -124,7 +124,7 @@
 
     </Style>
 
-    <!-- "Next" button for login -->
+    <!-- "Next" button for login and register button-->
     <Style x:Key="LoginPageNextText" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="Foreground" Value ="{StaticResource ForegroundVeryDarkBrush}"/>
         <Setter Property="Background" Value="{StaticResource MainExtraTextColorBrush}"/>

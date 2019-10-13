@@ -11,7 +11,15 @@ namespace VaporwavePlayer
     public partial class PageHost : UserControl
     {
 
-        
+        #region Consturctors
+
+        public PageHost()
+        {
+            InitializeComponent();
+
+        }
+
+        #endregion
 
 
         /// <summary>
@@ -23,10 +31,12 @@ namespace VaporwavePlayer
             set => SetValue(CurrentPageProperty, value);
         }
 
+        
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CurrentPageProperty =
             DependencyProperty.Register(nameof(CurrentPage), typeof(BasePage), typeof(PageHost), new UIPropertyMetadata(CurrentPagePropertyChanged));
 
+        
 
 
         #region Property Changed Events
@@ -54,14 +64,6 @@ namespace VaporwavePlayer
 
 
         #endregion
-        #region Consturctors
-
-        public PageHost()
-        {
-            InitializeComponent();
-            
-        }
-
-        #endregion
+       
     }
 }

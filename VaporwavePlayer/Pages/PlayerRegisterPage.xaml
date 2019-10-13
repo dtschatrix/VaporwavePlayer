@@ -39,11 +39,12 @@
                             <PasswordBox Style = "{StaticResource PassField}" Tag="Password" x:Name="PasswordText"/>
 
                             <Button Style = "{StaticResource LoginPageNextText}"
-                                    local:IsBusyProperty.Value="{Binding LoginIsRunning}"
+                                    local:IsBusyProperty.Value="{Binding RegisterIsRunning}"
                                     Content="Register" 
                                     Command="{Binding RegisterCommand}"
                                     CommandParameter="{Binding ElementName=Page}"/>
-                            <Button Style = "{StaticResource LoginPageText}" Content="I already have an account"/>
+                            <Button Style = "{StaticResource LoginPageText}" Content="I already have an account"
+                                    Command="{Binding LoginCommand}"/>
 
 
 
