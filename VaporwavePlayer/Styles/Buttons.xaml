@@ -192,8 +192,8 @@
            <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}"/>
            <Setter Property="HorizontalAlignment" Value ="Center"/>
            <Setter Property="VerticalAlignment" Value="Center"/>
-           <Setter Property="Padding" Value="4 0 5 0"/>
-           <Setter Property="Margin" Value="12"/>
+           <Setter Property="Padding" Value="3 0 5 0"/>
+           <Setter Property="Margin" Value="11"/>
            <Setter Property="Height" Value ="30"/>
            <Setter Property="Width" Value ="73"/>
 
@@ -274,5 +274,7 @@
 
     </Style>
 
+
+    <!-- TODO Create styles for Media Player Controls -->
 
 </ResourceDictionary>

@@ -11,6 +11,6 @@
       Title="MainPlayerWindow">
 
     <Border>
-       
+        <local:PlayerControls/>
     </Border>
 </local:BasePage>

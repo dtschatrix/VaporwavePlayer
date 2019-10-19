@@ -56,6 +56,13 @@
     <system:String x:Key="ChicagoDiceIcon">&#x1F3B2;</system:String>
     <system:String x:Key="ChicagoUpDownArrow">&#8645;</system:String>
     <system:String x:Key="ChicagoDownUpArrow">&#8693;</system:String>
+    <system:String x:Key="ChicagoPauseSongIcon">&#x23f8;</system:String>
+    <system:String x:Key="ChicagoPlaySongIcon">&#9654;</system:String>
+    <system:String x:Key="ChicagoStopSongIcon">&#x23f9;</system:String>
+    <system:String x:Key="ChicagoNextSongIcon">&#x23ed;</system:String>
+    <system:String x:Key="ChicagoPreviousSongIcon">&#x23ee;</system:String>
+    <system:String x:Key="ChicagoRewindIcon">&#9194;</system:String>
+    <system:String x:Key="ChicagoFastForwardIcon">&#9193;</system:String>
 
 
 
