@@ -67,20 +67,26 @@
                                 <Setter Property="Background" TargetName="background" Value="{StaticResource SideMenuForegroundColorBrush}"/>
                             </DataTrigger>
 
-                            <EventTrigger RoutedEvent="MouseEnter">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation To="{StaticResource ExtraTextColor}" Duration="0:0:0.3" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseLeave">
-                                <BeginStoryboard>
+                           <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=IsMouseOver}" Value="True"/>
+                                    <Condition Binding="{Binding Path=IsSelected}" Value="False"></Condition>
+                                </MultiDataTrigger.Conditions>
+                                <MultiDataTrigger.EnterActions>
+                                    <BeginStoryboard Name="animation">
+                                        <Storyboard>
+                                            <ColorAnimation To="{StaticResource ExtraTextColor}" Duration="0:0:0.3" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiDataTrigger.EnterActions>
+                                <MultiDataTrigger.ExitActions>
+                                    <BeginStoryboard>
                                     <Storyboard>
                                         <ColorAnimation To="Transparent" Duration="0:0:0.3" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
                                     </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
+                                    </BeginStoryboard>
+                                </MultiDataTrigger.ExitActions>
+                            </MultiDataTrigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" TargetName="container" Value="{StaticResource SideMenuForegroundColor}"/>
                             </Trigger>
