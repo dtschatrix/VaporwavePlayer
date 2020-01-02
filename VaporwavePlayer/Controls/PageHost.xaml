@@ -4,10 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VaporwavePlayer"
+             xmlns:core ="clr-namespace:VaporwavePlayer.Core;assembly=VaporwavePlayer.Core"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Frame x:Name="OldPage" local:NoFrameHistory.Value ="True"/>
         <Frame x:Name="NewPage" local:NoFrameHistory.Value ="True"/>
     </Grid>
+
 </UserControl>

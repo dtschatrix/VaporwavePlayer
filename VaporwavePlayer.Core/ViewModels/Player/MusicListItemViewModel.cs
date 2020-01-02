@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace VaporwavePlayer.Core
 {
     public class MusicListItemViewModel : BaseViewModel
     {
+        #region Public Properties
+
+       
         /// <summary>
         /// Display the artist name
         /// </summary>
@@ -32,6 +37,46 @@ namespace VaporwavePlayer.Core
         /// True if item is selected
         /// </summary>
         public bool IsSelected { get; set; }
+
+        #endregion
+
+        #region Public Commands
+
+        public ICommand OpenSongCommand { get; set; }
+
+        #endregion
+
+        #region Constructor
+   /*     public MusicListItemViewModel()
+        {
+            OpenSongCommand = new RelayCommand(OpenSong);
+
+
+        } */
+
+
+        #endregion
+
+        #region Command Methods
+
+      /*  public void OpenSong()
+        {
+            IoC.Application.GoToPage(ApplicationPage.MainPlayerWindow, new MusicListViewModel()
+            {
+                Items = new List<MusicListItemViewModel>
+                {
+                    new MusicListItemViewModel()
+                    {
+                        SongName = SongName,
+                        SongDuration = SongDuration,
+                        ArtistName = ArtistName,
+                        PathToAlbumImage = PathToAlbumImage
+                    }
+                }
+            });
+        }*/
+
+        #endregion
 
     }
 }

@@ -10,6 +10,10 @@ namespace VaporwavePlayer.Core
         /// The kernel for IoC container
         /// </summary>
         public static IKernel Kernel { get; private set; } = new StandardKernel();
+        /// <summary>
+        /// Shortcut to access the <see cref="ApplicationViewModel"/>
+        /// </summary>
+        public static ApplicationViewModel Application = IoC.Get<ApplicationViewModel>();
         #endregion
 
         /// <summary>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="VaporwavePlayer.PlayerControlsLarge"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaporwavePlayer"
+             xmlns:core="clr-namespace:VaporwavePlayer.Core;assembly=VaporwavePlayer.Core"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Template>
+        <ControlTemplate TargetType="UserControl">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Row="0">
+
+
+                </Grid>
+                <!--Media control buttons -->
+                <Grid Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinWidth="350" Height="60" Background="{StaticResource ForegroundSideMenuColorBrush}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width ="*"/>
+                        <ColumnDefinition Width ="Auto"/>
+                        <ColumnDefinition Width ="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+
+
+                            <!--TODO create style for pause button and find another symbol. Same for all border buttons -->
+                            <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoRewindIcon}"/>
+                            <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoPlaySongIcon}"/>
+                            <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoFastForwardIcon}"/>
+                            <!--<Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoFastForwardIcon}"/>-->
+                            <Slider Style="{StaticResource VerticalSlider}"/>
+
+                        </StackPanel>
+                    </Grid>
+
+
+                </Grid>
+
+                <ContentPresenter Grid.Row="1"/>
+
+            </Grid>
+
+
+        </ControlTemplate>
+    </UserControl.Template>
+</UserControl>

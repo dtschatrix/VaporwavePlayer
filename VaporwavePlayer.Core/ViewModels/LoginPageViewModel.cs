@@ -63,7 +63,7 @@ namespace VaporwavePlayer.Core
             await RunCommand(() => this.LoginIsRunning, async () =>
             {
                 await Task.Delay(500);
-                var login = LocalLogin;
+                //var login = LocalLogin;
                 IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.MainPlayerWindow);
                 //TODO overwrite this.
                 // var pass = (parameter as IHavePassword)?.securePassword.Unsecure();
@@ -82,7 +82,7 @@ namespace VaporwavePlayer.Core
             //return;
 
             IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Register);
-                await Task.Delay(1);
+            await Task.Delay(1);
 
         }
 

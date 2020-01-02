@@ -7,8 +7,7 @@
       xmlns:core="clr-namespace:VaporwavePlayer.Core;assembly=VaporwavePlayer.Core"
       mc:Ignorable="d" 
       x:Name="Page"
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlayerLoginPage">
+      d:DesignHeight="450" d:DesignWidth="800">
 
     <Border>
         <Grid >
@@ -42,7 +41,9 @@
                                     local:IsBusyProperty.Value="{Binding RegisterIsRunning}"
                                     Content="Register" 
                                     Command="{Binding RegisterCommand}"
-                                    CommandParameter="{Binding ElementName=Page}"/>
+                                    CommandParameter="{Binding ElementName=Page}"
+                                    IsDefault="True"/>
+                                    
                             <Button Style = "{StaticResource LoginPageText}" Content="I already have an account"
                                     Command="{Binding LoginCommand}"/>
 

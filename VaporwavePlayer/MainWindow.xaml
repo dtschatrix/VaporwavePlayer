@@ -52,7 +52,7 @@
                                         <!-- Title Bar -->
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
                                         <!-- Drop shadow -->
-                                       
+
                                         <!-- Window Content -->
                                         <RowDefinition Height="*" />
 
@@ -82,7 +82,7 @@
                                                 <Run Text="V A P O R E M O R Y"/>
                                             </TextBlock>
                                         </Viewbox>
-                                        
+
                                         <!-- Window Buttons -->
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                                             <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_"  />
@@ -95,7 +95,7 @@
                                     <!-- Page Content -->
                                     <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" ClipToBounds="true">
                                         <ContentPresenter Content="{TemplateBinding Content}" />
-                                     </Border>
+                                    </Border>
 
                                 </Grid>
 
@@ -118,42 +118,43 @@
 
 
 
-        
-     <Grid>
+
+    <Grid>
 
         <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         <Grid.Background>
-                <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
-         </Grid.Background>
-
-         <local:PageHost Grid.Column="1" 
-                         d:DataContext=""
-                         DataContext="{Binding ApplicationViewModel.CurrentPage, 
-                                     Source={x:Static local:ViewModelLocator.Instance},  
-                                     Converter={local:ApplicationPageValueConverter}}"
-                         CurrentPage="{Binding}" />
+            <ImageBrush ImageSource="resources/backgrounds/Sunset_vaporwave.jpg"/>
+        </Grid.Background>
 
 
-        <local:SideMenuControl local:AnimateSlideInFromLeftProperty.Value =
+
+
+        <local:SideMenuControl Grid.Column="0" local:AnimateSlideInFromLeftProperty.Value =
                                "{Binding ApplicationViewModel.SideMenuVisible, 
                                 Source={x:Static local:ViewModelLocator.Instance}}">
             <local:MusicListControl/>
         </local:SideMenuControl>
-        
-        
-        </Grid>
-        
 
-    
+        <local:PageHost Grid.Column="1" 
+                         d:DataContext=""
+                         DataContext="{Binding ApplicationViewModel.CurrentPage,
+                         Source={x:Static local:ViewModelLocator.Instance},
+                         Converter={local:ApplicationPageValueConverter}}"
+                         CurrentPage="{Binding}" /> 
+
+    </Grid>
 
 
 
 
-   
+
+
+
+
 
 </Window>
   

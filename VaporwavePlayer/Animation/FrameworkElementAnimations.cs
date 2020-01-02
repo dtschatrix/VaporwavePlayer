@@ -17,13 +17,13 @@ namespace VaporwavePlayer
         /// <param name="page">The page to animate</param>
         /// <param name="seconds">Duration of animation</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeInFromRight(this FrameworkElement element, float seconds, bool keepMargin = true)
+        public static async Task SlideAndFadeInFromRight(this FrameworkElement element, float seconds, bool keepMargin = true, int width =0)
         {
             //Create the storyboard
             var storyboardAnimation = new Storyboard();
 
             //Add slide from right to animation
-            storyboardAnimation.AddSlideFromRight(seconds: seconds,offset: element.ActualWidth,keepMargin: keepMargin);
+            storyboardAnimation.AddSlideFromRight(seconds: seconds, width == 0 ? element.ActualWidth : width,keepMargin: keepMargin);
             //Add fade in animation
             storyboardAnimation.AddFadeIn(seconds: seconds);
 
@@ -42,13 +42,13 @@ namespace VaporwavePlayer
         /// <param name="seconds">Duration of animation</param>
         /// <param name="keepMargin"></param>
         /// <returns></returns>
-        public static async Task SlideAndFadeToFromRight(this FrameworkElement element, float seconds, bool keepMargin = true)
+        public static async Task SlideAndFadeToFromRight(this FrameworkElement element, float seconds, bool keepMargin = true, int width =0)
         {
             //Create the storyboard
             var storyboardAnimation = new Storyboard();
 
             //Add slide from right to animation
-            storyboardAnimation.AddSlideToRight(seconds: seconds, offset: element.ActualWidth,keepMargin: keepMargin);
+            storyboardAnimation.AddSlideToRight(seconds: seconds, width == 0 ? element.ActualWidth : width,keepMargin: keepMargin);
             //Add fade in animation
             storyboardAnimation.AddFadeIn(seconds: seconds);
 
@@ -66,13 +66,13 @@ namespace VaporwavePlayer
         /// <param name="element">The page to animate</param>
         /// <param name="seconds">Duration of animation</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeOutToLeft(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeOutToLeft(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true, int width =0)
         {
             //Create the storyboard
             var storyboardAnimation = new Storyboard();
 
             //Add slide from right to animation
-            storyboardAnimation.AddSlideToLeft(seconds: seconds, offset: element.ActualWidth, keepMargin: keepMargin);
+            storyboardAnimation.AddSlideToLeft(seconds: seconds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             //Add fade in animation
             storyboardAnimation.AddFadeOut(seconds: seconds);
 
@@ -92,13 +92,13 @@ namespace VaporwavePlayer
         /// <param name="page">The page to animate</param>
         /// <param name="seconds">Duration of animation</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeInFromLeft(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeInFromLeft(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true, int width = 0)
         {
             //Create the storyboard
             var storyboardAnimation = new Storyboard();
 
             //Add slide from right to animation
-            storyboardAnimation.AddSlideFromLeft(seconds: seconds, offset: element.ActualWidth, keepMargin: keepMargin);
+            storyboardAnimation.AddSlideFromLeft(seconds: seconds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             //Add fade in animation
             storyboardAnimation.AddFadeIn(seconds: seconds);
 

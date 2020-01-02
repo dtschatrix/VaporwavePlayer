@@ -7,8 +7,7 @@
       xmlns:core="clr-namespace:VaporwavePlayer.Core;assembly=VaporwavePlayer.Core"
       mc:Ignorable="d" 
       x:Name="Page"
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlayerLoginPage">
+      d:DesignHeight="450" d:DesignWidth="800">
 
     <Border>
         <Grid >
@@ -34,11 +33,14 @@
                                        FontFamily="{StaticResource ThunderStrike3D}"
                                        Foreground="{StaticResource MainTextColorBrush}"/>
                             <!-- Nickname field-->
-                            <TextBox Style = "{StaticResource LoginField }" Tag="Nickname"/>
+                            <TextBox Style = "{StaticResource LoginField }" 
+                                     Tag="Nickname"
+                                     local:IsFocusedProperty.Value="true"/>
                             <!--Password field -->
                             <PasswordBox Style = "{StaticResource PassField}" Tag="Password" x:Name="PasswordText"/>
 
                             <Button Style = "{StaticResource LoginPageNextText}"
+                                    IsDefault="True"
                                     local:IsBusyProperty.Value="{Binding LoginIsRunning}"
                                     Content="Login" 
                                     Command="{Binding LoginCommand}"

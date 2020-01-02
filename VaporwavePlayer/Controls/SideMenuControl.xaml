@@ -25,8 +25,9 @@
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Orientation="Horizontal">
                                     <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoDiceIcon}"/>
-                                    <Button Style="{StaticResource SlideMenuSortButton}" Content ="{StaticResource ChicagoUpDownArrow}"/>
-                                    <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoSearchIcon}"/>
+                                    <Button Style ="{StaticResource SlideMenuButton}" Content="{StaticResource ChicagoInfoIcon}"/>
+                                    <!--<Button Style="{StaticResource SlideMenuSortButton}" Content ="{StaticResource ChicagoUpDownArrow}"/>-->
+                                    <Button Style="{StaticResource SlideMenuButton}" Content ="{StaticResource ChicagoSettingsIcon}"/>
                                 </StackPanel>
                             </Grid>
 

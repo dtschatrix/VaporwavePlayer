@@ -56,7 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataModels\ApplicationPage.cs" />
     <Compile Include="Experessions\ExpressionHelpers.cs" />
     <Compile Include="IoC\IoC.cs" />

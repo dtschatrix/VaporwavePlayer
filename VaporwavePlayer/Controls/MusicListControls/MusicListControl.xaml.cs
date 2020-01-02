@@ -18,7 +18,7 @@ namespace VaporwavePlayer
     /// <summary>
     /// Interaction logic for MusicListControl.xaml
     /// </summary>
-    public partial class MusicListControl : UserControl
+    public partial class MusicListControl
     {
         public MusicListControl()
         {

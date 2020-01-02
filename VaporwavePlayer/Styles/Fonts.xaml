@@ -63,6 +63,8 @@
     <system:String x:Key="ChicagoPreviousSongIcon">&#x23ee;</system:String>
     <system:String x:Key="ChicagoRewindIcon">&#9194;</system:String>
     <system:String x:Key="ChicagoFastForwardIcon">&#9193;</system:String>
+    <system:String x:Key="ChicagoSettingsIcon">&#x2699;</system:String>
+    <system:String x:Key="ChicagoInfoIcon">&#9432;</system:String>
 
 
 

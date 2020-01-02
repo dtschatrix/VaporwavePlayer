@@ -88,10 +88,11 @@
     <Compile Include="Animation\PageAnimation.cs" />
     <Compile Include="Animation\StoryboardHelpers.cs" />
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
+    <Compile Include="AttachedProperties\TextAttachedProperty.cs" />
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
-    <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
+    <Compile Include="AttachedProperties\IsBusyProperty.cs" />
     <Compile Include="Controls\MusicListControls\MusicListControl.xaml.cs">
       <DependentUpon>MusicListControl.xaml</DependentUpon>
     </Compile>
@@ -101,8 +102,8 @@
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PlayerMenuControls\PlayerControls.xaml.cs">
-      <DependentUpon>PlayerControls.xaml</DependentUpon>
+    <Compile Include="Controls\PlayerMenuControls\PlayerControlsLarge.xaml.cs">
+      <DependentUpon>PlayerControlsLarge.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
@@ -136,7 +137,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PlayerMenuControls\PlayerControls.xaml">
+    <Page Include="Controls\PlayerMenuControls\PlayerControlsLarge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,6 +168,10 @@
     <Page Include="Pages\PlayerLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Elements.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Colors.xaml">
       <Generator>MSBuild:Compile</Generator>

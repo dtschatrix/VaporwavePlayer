@@ -8,7 +8,7 @@ using VaporwavePlayer.Core;
 namespace VaporwavePlayer
 {
 
-    public class BasePage : Page
+    public class BasePage : UserControl
     {
         #region Public Properties
 
@@ -61,7 +61,7 @@ namespace VaporwavePlayer
             {
                 case PageAnimation.SlideAndFadeInFromRight:
                     //Start the animation
-                    await this.SlideAndFadeInFromRight(this.SlideSeconds);
+                    await this.SlideAndFadeInFromRight(this.SlideSeconds, width: (int)Application.Current.MainWindow.Width);
 
                     break;
 
@@ -110,7 +110,7 @@ namespace VaporwavePlayer
 
         public VM ViewModel
         {
-            get => ViewModel;
+            get => mViewModel;
             set
             {
                 // If nothing has changed => return
@@ -119,7 +119,7 @@ namespace VaporwavePlayer
 
                 mViewModel = value;
                 //set the data Context
-                this.DataContext = mViewModel;
+                DataContext = mViewModel;
             }
         }
 

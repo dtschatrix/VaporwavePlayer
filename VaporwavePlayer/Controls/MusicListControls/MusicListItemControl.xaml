@@ -15,11 +15,12 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ContentControl}">
                         
-                            <Border x:Name="background">
-                            <Grid x:Name="container"  Background="Transparent">
+                            <Border x:Name="background" Background="Transparent">
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding OpenSongCommand}"></MouseBinding>
+                                </Border.InputBindings>
+                                <Grid x:Name="container"  Background="Transparent">
                                 <Grid.ColumnDefinitions>
-                                    <!--Active track panel -->
-                                    <!--Album Picture -->
                                     <ColumnDefinition Width="60"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
@@ -102,7 +103,7 @@
 
 
 
-    <ContentControl d:DataContext="{x:Static core:MusicListDesignModel.Instance}"
+    <ContentControl d:DataContext="{x:Static core:MusicListItemDesignModel.Instance}" 
                     Style="{StaticResource ContentStyle}">
       
     </ContentControl>
